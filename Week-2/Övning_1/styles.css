@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(49deg, lightblue, lightgrey, lightblue);
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  font-family: "Courier New", Courier, monospace;
+  font-style: bold;
+  font-weight: 600;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stycke {
+  margin: 30px 0px; /* 30px marginal  */
+  text-decoration: underline; /* understräck */
+}
+
+.paragraph {
+  text-align: center; /* centrerar text */
+}
+
+h1 {
+  border: 2px solid black; /* ringar in */
+  padding: 5px 15px; /* 5px upp/ner, 15px höger/vänster */
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 8px;
+}
