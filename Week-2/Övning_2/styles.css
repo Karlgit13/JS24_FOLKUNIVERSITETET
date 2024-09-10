@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+article {
+  font-size: 14px;
+}
+
+footer {
+  padding-top: 30px;
+}
+
+.copyright {
+  font-size: 11px;
+  font-weight: 699;
+}
