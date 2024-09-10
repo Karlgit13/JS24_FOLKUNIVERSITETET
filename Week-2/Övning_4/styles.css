@@ -1,53 +1,57 @@
 * {
-  margin: 0;
   padding: 0;
-} /* återställer webläsarens standard inst. */
-
-body {
-  background-image: linear-gradient(
-    49deg,
-    lightblue,
-    lightgrey,
-    lightblue
-  ); /* bakgrund */
-  height: 100vh; /* 100 view height */
-  width: 100vw; /* 100 view width */
+  margin: 0;
 }
 
-.main {
-  font-family: "Courier New", Courier, monospace; /* text stil */
-  font-style: bold; /* tjock text */
-  font-weight: 600; /* text storlek i enheter */
-  color: black; /* text färg */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* text skugga */
-  display: flex; /* flexbox */
-  flex-direction: column; /* flex med columner */
-  align-items: center; /* centrerar flexboxen */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.stycke {
-  margin: 30px 0px; /* 30px marginal upp/ner, 0px höger/vänster  */
-  text-decoration: underline; /* understräck */
+.searchimg {
+  width: 30px;
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+  z-index: 99;
+  cursor: pointer;
 }
 
-.paragraph {
-  text-align: center; /* centrerar text */
+.logo {
+  cursor: pointer;
+  margin-bottom: 15px;
 }
 
-h1 {
-  border: 2px solid black; /* ringar in */
-  padding: 5px 15px; /* 5px upp/ner, 15px höger/vänster */
+.logos {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
 }
 
-h2 {
-  text-decoration: underline;
-  justify-content: left; /* understräck */
+.textarea-div {
+  position: relative;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  margin: 8px;
-  justify-content: left; /* marginal mellan headers */
+textarea {
+  width: 70vw;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: lightgray;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.nyhet {
+    display: flex;
 }
