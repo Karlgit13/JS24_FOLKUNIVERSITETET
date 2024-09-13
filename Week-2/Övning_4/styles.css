@@ -48,8 +48,11 @@ textarea:hover {
   outline: 1px solid grey;
 }
 
-.Loginbutton {
-  background-color: blue;
+.navbar > ul > button {
+  color: white;
+  border-radius: 15px;
+  background-color: rgb(62, 98, 218);
+  padding: 10px;
 }
 
 .searchbutton {
