@@ -1,24 +1,28 @@
 /* menyn ska vara centrerad med jämnt mellanrum mellan alla element */
 .menu {
-
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
 }
 
 /* raden med bilder ska hamna längst ner i article */
 article {
-
+  display: flex;
+  align-items: flex-end;
 }
 
 /* boxarna med text ska hamna längst ut åt vardera sida */
 footer {
-
+  display: flex;
+  justify-content: space-between;
 }
 
 /* dom små boxarna med ljusare färg ska vara samma storlek medans den stora boxen ska vara dubbla storleken.
 alla boxar tillsammans ska täcka hela sidan */
 .small {
-
+  width: 25%;
 }
 
 .large {
-
+  width: 75%;
 }
