@@ -48,7 +48,7 @@ textarea:hover {
   outline: 1px solid grey;
 }
 
-.navbar > ul > button {
+.navbar ul button {
   color: white;
   border-radius: 15px;
   background-color: rgb(62, 98, 218);
