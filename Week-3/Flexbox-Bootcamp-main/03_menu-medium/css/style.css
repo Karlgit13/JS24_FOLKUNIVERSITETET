@@ -1,26 +1,26 @@
 :root {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
+body {
+  width: 100vw;
+}
 nav {
-    max-width: 1000px;
-    height: 3rem;
-    background: #eee;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-nav img {
-    height: 50%;
-    margin: auto auto auto 1rem; 
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: rgb(233, 229, 229);
 }
 
 nav a {
-    text-decoration: none;
-    color: #999;
-    margin: 1rem;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  margin: 0px 3px;
 }
-nav a:hover {
-    color: #222;
+
+img {
+  width: 70px;
+  position: absolute;
+  left: 15px;
+  top: 25px;
 }
