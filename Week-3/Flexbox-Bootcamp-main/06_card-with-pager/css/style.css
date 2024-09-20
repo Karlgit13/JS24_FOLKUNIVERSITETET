@@ -1,56 +1,50 @@
 body {
-    margin: 0;
-    background: rgb(212, 212, 212);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 50px;
+  text-align: center;
+  background: lightgray;
 }
 
-article.card {
-    width: 280px;
-    height: 400px;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    border-radius: .25rem;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 2rem rgba(0,0,0,.1);
-    color: rgba(59, 28, 28, 0.4);
+.card {
+  background: white;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  position: relative;
 }
 
-.card h1 {
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: 400;
-    margin-top: auto;
-    text-align: center;
-    padding: 0 1.6rem;
-    color: rgba(0,0,0,.8);
+.dot {
+  display: flex;
+  background-color: grey;
+  padding: 2px;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
 }
 
-.card footer {
-    display: flex;
-    margin-top: auto;
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 80px;
 }
 
-.card footer a {
-    text-decoration: none;
-    width: .5rem;
-    height: .5rem;
-    background: rgba(0,0,0,.4);
-    margin: .5rem;
-    border-radius: 999rem;
+h1 {
+  font-weight: 500;
+  line-height: 90%;
+}
+h5 {
+  font-weight: 600;
+  color: grey;
+  text-align: center;
+  font-style: bold;
+  margin-top: -5px;
+  margin-bottom: 80px;
 }
 
-.card footer a.active {
-    background: rgba(0,0,0,.8);
+.dot:active {
+  color: black;
 }
