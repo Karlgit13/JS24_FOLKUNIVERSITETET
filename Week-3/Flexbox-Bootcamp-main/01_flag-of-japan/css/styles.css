@@ -1,0 +1,15 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    display: flex;
+    background-color: red;
+    border-radius: 99%;
+    width: 180px;
+    height: 180px;
+}
