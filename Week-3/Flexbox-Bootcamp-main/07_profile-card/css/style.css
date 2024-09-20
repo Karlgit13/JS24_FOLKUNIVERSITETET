@@ -1,63 +1,68 @@
+img {
+  width: 50px;
+}
+
 body {
-    margin: 0;
-    background: rgb(212, 212, 212);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
 }
 
-article.card {
-    width: 280px;
-    height: 400px;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    border-radius: .25rem;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 2rem rgba(0,0,0,.1);
-    color: rgba(59, 28, 28, 0.4);
+article {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  position: relative;
+  border-radius: 5px;
 }
 
-.card img.close {
-    width: 1rem;
-    margin: 1rem 1rem auto auto;
-    opacity: .4;
+.first {
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
-.card img.profile {
-    width: 7rem;
-    border-radius: 999rem;
-
+.first img {
+  width: 20px;
+  padding: 10px;
 }
 
-.card h1 {
-    font-size: 1.3rem;
-    color: rgba(0,0,0,.8);
-    margin: .75rem 0 .5rem 0;
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card p {
-    margin: 0;
-    padding: 0;
+.second img {
+  border-radius: 50%;
+  width: 150px;
 }
 
-.card a {
-    text-decoration: none;
-    width: calc(100% - 3rem);
-    padding: 1rem;
-    box-sizing: border-box;
-    background: rgba(0,0,0,.8);
-    color: #eee;
-    text-align: center;
-    margin: auto .5rem 1.5rem .5rem;
-    border-radius: 999rem;
-    font-size: 1.2rem;
+.third {
+  text-align: center;
 }
 
-.card a:hover {
-    background: rgba(0,0,0,1);
+.third h1 {
+  font-size: 18px;
+  font-style: bold;
+  margin-top: 25px;
+}
+
+.third p {
+  color: grey;
+  margin-top: -8px;
+  margin-bottom: 50px;
+}
+
+.third a {
+  background-color: rgba(0, 0, 0, 0.781);
+  color: white;
+  padding: 12px 34px;
+  border-radius: 20px;
+  text-decoration: none;
 }
