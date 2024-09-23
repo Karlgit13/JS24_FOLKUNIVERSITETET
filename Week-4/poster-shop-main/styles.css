@@ -133,6 +133,7 @@ footer {
   list-style: none;
   padding: 50px;
   margin-top: -90px;
+  align-items: center;
 }
 
 button:hover {
