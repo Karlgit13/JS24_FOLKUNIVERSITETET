@@ -23,7 +23,7 @@ body {
   bottom: 0;
 }
 h1 {
-  font-size: 72px;
+  font-size: 92px;
   text-align: center;
   padding: 10px;
 }
@@ -60,10 +60,18 @@ button {
 
 .main-grid img {
   width: 300px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .second-grid img {
   width: 450px;
+  cursor: pointer;
 }
+
+.navIcon {
+  cursor: pointer;
+}
+
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -71,8 +79,7 @@ button {
   padding: 50px;
   background-color: black;
   max-width: 1000px;
-  margin: auto; /* This will center the grid */
-
+  margin: auto;
 }
 .second-grid {
   display: grid;
@@ -83,7 +90,7 @@ button {
 }
 
 .second-grid-p {
-    color: black;
+  color: black;
 }
 
 .info {
@@ -98,32 +105,41 @@ button {
   color: black;
 }
 .info p {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 ul li {
-    color: white;
+  color: white;
 }
 
 footer {
-    background-color: rgb(88, 87, 87);
+  background-color: rgb(88, 87, 87);
 }
 
-.firstUlGrid    {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-    list-style: none;
-    padding: 50px;
-    font-size: 28px;
-    font-weight: 600;
-    margin-top: 50px;
+.firstUlGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  list-style: none;
+  padding: 50px;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 50px;
 }
 
 .footerGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-    list-style: none;
-    padding: 50px;
-    margin-top: -90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  list-style: none;
+  padding: 50px;
+  margin-top: -90px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.flex-column:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
