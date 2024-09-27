@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, .6);
+}
+
+.wrapper {
+    display: grid;
+    max-width: 800px;
+    width: 100%;
+    gap: .5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 12rem 4rem 24rem 8rem;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main sidebar"
+    "footer footer footer";
+
+}
+
+.wrapper > * {
+    background: rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+
