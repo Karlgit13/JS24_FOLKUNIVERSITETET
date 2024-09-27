@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.dice {
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1rem);
+  grid-template-rows: 1rem 1rem 1rem;
+  gap: 0.5rem;
+}
+
+.dice.faded {
+  opacity: 0.2;
+}
+
+.dice aside {
+  background: #222;
+  border-radius: 99rem;
+  display: none;
+}
+
+.dice.dots-1 aside:nth-child(1) {
+  display: block;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.dice.dots-2 aside:nth-child(1) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-2 aside:nth-child(2) {
+  display: block;
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
+}
+
+.dice.dots-3 aside:nth-child(1) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-3 aside:nth-child(2) {
+  display: block;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.dice.dots-3 aside:nth-child(3) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.dice.dots-4 aside:nth-child(1) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-4 aside:nth-child(2) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-4 aside:nth-child(3) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.dice.dots-4 aside:nth-child(4) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.dice.dots-5 aside:nth-child(1) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-5 aside:nth-child(2) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-5 aside:nth-child(3) {
+  display: block;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.dice.dots-5 aside:nth-child(4) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.dice.dots-5 aside:nth-child(5) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.dice.dots-6 aside:nth-child(1) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-6 aside:nth-child(2) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.dice.dots-6 aside:nth-child(3) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.dice.dots-6 aside:nth-child(4) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.dice.dots-6 aside:nth-child(5) {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.dice.dots-6 aside:nth-child(6) {
+  display: block;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
