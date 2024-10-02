@@ -29,12 +29,14 @@ h1 {
 }
 
 h3 {
+  font-family: 'Courier New', Courier, monospace;
   color: white;
   font-size: 24px;
   padding: 10px;
 }
 
 p {
+  font-family: 'Courier New', Courier, monospace;
   max-width: 300px;
   color: rgb(196, 190, 190);
   padding: 10px;
