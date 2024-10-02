@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.burger-menu {
+  width: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 375px;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 0.8rem;
+  background-color: #536dfe;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* MOBIL */
+@media (max-width: 600px) {
+  ul {
+    display: none;
+  }
+  ul > li {
+    cursor: pointer;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 600px) {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  ul > li {
+    text-decoration: none;
+    list-style: none;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .burger-menu {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
