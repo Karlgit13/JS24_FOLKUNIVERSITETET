@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.hero-section-one {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+.hero-section-one--one {
+  grid-row: 1 / 3;
+  background-image: url(assets/hand.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section-one--two {
+  background-color: #9e6d52;
+}
+
+.hero-section-one--three {
+  grid-column: 2 / 2;
+  background-color: #0a846e;
+}
