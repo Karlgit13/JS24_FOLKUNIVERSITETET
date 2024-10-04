@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,11 +12,10 @@ body {
 
 .hero-section-one {
   display: grid;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: 1fr 1fr;
+  width: 100vw;
+  max-height: 200px;
 }
 
 .hero-section-one--one {
@@ -23,13 +23,19 @@ body {
   background-image: url(assets/hand.jpg);
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
 }
 
 .hero-section-one--two {
   background-color: #9e6d52;
+  width: 100%;
+  height: 100px;
 }
 
 .hero-section-one--three {
-  grid-column: 2 / 2;
   background-color: #0a846e;
+  width: 100%;
+  height: 100px;
 }
