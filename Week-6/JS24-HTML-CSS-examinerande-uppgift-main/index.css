@@ -78,7 +78,8 @@ nav > ul > li {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  width: 1000px;
+  width: auto;
+  max-width: 1000px;
   margin: auto;
   background-color: white;
 }
@@ -101,56 +102,129 @@ nav > ul > li {
   padding: 1rem;
   border-radius: 10rem;
 }
+
 .right {
   grid-row: 1 / 3;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
 .right > button {
-  padding: 0.5rem;
+  padding: 1rem;
   width: 90px;
+  border-radius: 0.5rem;
   margin-left: 8rem;
   border: none;
   color: white;
   background-color: #0a846e;
   cursor: pointer;
 }
+
 .right > h5 {
   font-size: 18px;
   font-weight: 700;
 }
+
 .flex-container > h2 {
   color: #055647;
   text-align: center;
   background-color: white;
   padding: 1rem;
 }
+
 .line {
-  width: 50vw;
+  max-width: 1000px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.line--two {
+  max-width: 1000px;
+  margin: auto;
 }
 
 .grid-container img {
   width: 15rem;
   height: 15rem;
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 1000px;
+  width: auto;
   place-items: center;
   margin: auto;
   background-color: white;
+  gap: 1rem;
 }
+
 .plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 1000px;
+  width: auto;
+  max-width: 1000px;
   margin: auto;
   background-color: white;
   padding: 1rem;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.profile-name {
+  font-size: 14px;
+  color: grey;
+}
+
+.grid-container div button {
+  padding: 0.3rem 0rem;
+  border: none;
+  color: white;
+  background-color: #b93857;
+  border-radius: 1rem;
+}
+
+.grid-container div {
+  padding: 1rem;
+}
+
+.fler-button-div {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.fler-button-div button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #0a846e;
+  width: 90px;
+  cursor: pointer;
+}
+
+.fler-button-div button:hover {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: scale(1.05);
 }
 
 .item-1,
@@ -161,8 +235,20 @@ nav > ul > li {
 .item-6 {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.item-1:hover,
+.item-2:hover,
+.item-3:hover,
+.item-4:hover,
+.item-5:hover,
+.item-6:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
 .item-1 div,
 .item-2 div,
 .item-3 div,
