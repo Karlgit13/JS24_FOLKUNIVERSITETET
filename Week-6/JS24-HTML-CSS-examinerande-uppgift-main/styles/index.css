@@ -349,10 +349,9 @@ footer {
   max-width: 1000px;
   min-height: 300px;
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   background-color: #0a846e;
   /* background-image: url(assets/hand.jpg);
   background-size: cover;
@@ -360,17 +359,20 @@ footer {
 }
 
 .footer-left {
+  grid-column: 1 / 1;
+  grid-row: 1 / 4;
   width: 100%;
   min-height: 100%;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  color: black;
+  color: white;
+  background-color: black;
 }
 
 .footer-left-first {
-  grid-column: 1 / 4;
+  grid-column: 2 / 3;
 }
 
 .footer-left-second {
@@ -382,6 +384,8 @@ footer {
 }
 
 .footer-right {
+  grid-column: 2 / 2;
+  grid-row: 1 / 4;
   width: 100%;
   height: 100%;
   display: flex;
