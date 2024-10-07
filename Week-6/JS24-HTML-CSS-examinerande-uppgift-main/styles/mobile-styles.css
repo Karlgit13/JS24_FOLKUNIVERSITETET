@@ -6,6 +6,7 @@
   .trash-logo {
     display: none;
   }
+  
 }
 
 /* MOBILE */
@@ -14,6 +15,10 @@
     overflow-x: hidden;
   }
 
+
+  .hero-section-one--one {
+    background-image: none;
+  }
   nav {
     display: none;
   }
@@ -108,11 +113,18 @@
   }
 
   footer {
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
-  footer > * {
-    display: flex;
+  .footer-left {
+    grid-column: 3 / 1;
+    grid-row: 2 / 2;
+  }
+
+  .footer-right {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
   }
 }
