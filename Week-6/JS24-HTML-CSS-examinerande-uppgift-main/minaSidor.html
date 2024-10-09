@@ -1,27 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mina Sidor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header class="header">
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="minaSidor.html">Planer</a></li>
-                <li class="header__nav-item"><a href="minaSidor.html">Historik</a></li>
-                <li class="header__nav-item"><a href="minaSidor.html">Tips</a></li>
-                <li class="header__nav-item"><a href="index.html">Logga ut</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Planer</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Historik</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Tips</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Logga ut</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Mina sidor</h1>
+        <h1 class="hero__title">Mina sidor</h1>
     </section>
+
+    <section class="planting">
+        <h2 class="planting__title">Lägg till ny plantering:</h2>
+        <form class="planting__form">
+            <div class="planting__form-group">
+                <label for="plant" class="planting__label">Planta:</label>
+                <input type="text" id="plant" name="plant" class="planting__input">
+            </div>
+            <div class="planting__form-group">
+                <label for="date" class="planting__label">Datum:</label>
+                <input type="date" id="date" name="date" class="planting__input">
+            </div>
+            <button type="submit" class="btn btn--primary">Lägg till</button>
+        </form>
+    </section>
+
+    <section class="plantings">
+        <h2 class="plantings__title">Dina planerade planteringar:</h2>
+        <div class="plant-card">
+            <img src="plant.jpg" alt="Gurka" class="plant-card__image">
+            <div class="plant-card__details">
+                <h3 class="plant-card__name">Gurka</h3>
+                <p class="plant-card__date">15 april 2024</p>
+                <p class="plant-card__author">Rico Coello</p>
+                <button class="btn btn--danger plant-card__remove-btn">Ta bort</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="plantings">
+        <h2 class="plantings__title">Dina planterade planteringar:</h2>
+        <div class="plant-card">
+            <img src="plant.jpg" alt="Gurka" class="plant-card__image">
+            <div class="plant-card__details">
+                <h3 class="plant-card__name">Gurka</h3>
+                <p class="plant-card__date">15 april 2024</p>
+                <p class="plant-card__author">Rico Coello</p>
+                <button class="btn btn--danger plant-card__remove-btn">Ta bort</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__images">
+            <img src="footer1.jpg" alt="Image 1" class="footer__image">
+            <img src="footer2.jpg" alt="Image 2" class="footer__image">
+            <img src="footer3.jpg" alt="Image 3" class="footer__image">
+            <img src="footer4.jpg" alt="Image 4" class="footer__image">
+        </div>
+        <a href="#" class="footer__link">Till toppen av sidan</a>
+    </footer>
 </body>
 
 </html>
