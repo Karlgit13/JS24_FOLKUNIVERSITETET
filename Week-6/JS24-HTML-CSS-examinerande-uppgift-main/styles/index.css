@@ -12,7 +12,7 @@ body {
   text-shadow: 0.1px 0.1px 0.1px black;
 }
 
-.hero-section-one {
+.hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr;
@@ -22,7 +22,7 @@ body {
   margin: auto;
 }
 
-.hero-section-one--one {
+.hero__logo {
   grid-row: 1 / 3;
   background-image: url("../assets/hand.jpg");
   background-size: cover;
@@ -32,13 +32,13 @@ body {
   max-height: 200px;
 }
 
-.hero-section-one--two {
+.hero__seedling {
   background-color: #9e6d52;
   width: 100%;
   height: 100px;
 }
 
-.hero-section-one--three {
+.hero__dig {
   background-color: #0a846e;
   width: 100%;
   height: 100px;

@@ -4,7 +4,7 @@
     display: none;
   }
 
-  .burger-menu {
+  .navigation__burger-menu {
     display: flex;
   }
 }
@@ -65,7 +65,7 @@ body {
     cursor: pointer;
   }
 
-  .burger-menu {
+  .navigation__burger-menu {
     display: none;
   }
 }
