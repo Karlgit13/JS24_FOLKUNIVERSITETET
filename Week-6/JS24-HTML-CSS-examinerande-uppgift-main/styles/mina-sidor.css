@@ -1,0 +1,71 @@
+/* MOBILE */
+@media (max-width: 668px) {
+  nav {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../assets/minaSidorHero.jpg");
+  background-size: cover;
+  background-position: center;
+  text-shadow: 1px 2px 1px black;
+  height: 300px;
+  width: 1000px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #edefee;
+  text-shadow: 0.1px 0.1px 0.1px black;
+}
+
+.lagg-till-plantering {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 1000px;
+  background-color: white;
+  padding: 0rem;
+}
+
+
+/* DESKTOP */
+@media (min-width: 668px) {
+  nav > * {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+  }
+
+  nav {
+    background-color: white;
+    padding: 1rem;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  nav > ul > li {
+    text-decoration: none;
+    list-style: none;
+    color: #055647;
+    cursor: pointer;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
