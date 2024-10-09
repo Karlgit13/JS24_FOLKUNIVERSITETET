@@ -44,7 +44,7 @@ body {
   height: 100px;
 }
 
-.nav-line {
+.nav__line {
   max-width: 1000px;
   margin: auto;
 }
@@ -73,7 +73,7 @@ nav > ul > li {
   cursor: pointer;
 }
 
-.flex-container {
+.flex__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +85,7 @@ nav > ul > li {
   background-color: white;
 }
 
-.grid-seed-package {
+.grid__seed-package {
   background-color: white;
   display: grid;
   place-items: center;
@@ -132,7 +132,7 @@ nav > ul > li {
   font-weight: 700;
 }
 
-.flex-container > h2 {
+.flex__container > h2 {
   color: #055647;
   text-align: center;
   background-color: white;
@@ -147,17 +147,17 @@ nav > ul > li {
   align-items: center;
 }
 
-.line--two {
+.line__two {
   max-width: 1000px;
   margin: auto;
 }
 
-.grid-container img {
+.grid__container img {
   width: 15rem;
   height: 15rem;
 }
 
-.grid-container {
+.grid__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 1000px;
@@ -191,12 +191,12 @@ nav > ul > li {
   margin-left: 0.5rem;
 }
 
-.profile-name {
+.profile__name {
   font-size: 14px;
   color: grey;
 }
 
-.grid-container div button {
+.grid__container div button {
   padding: 0.3rem 0rem;
   border: none;
   color: white;
@@ -204,11 +204,11 @@ nav > ul > li {
   border-radius: 1rem;
 }
 
-.grid-container div {
+.grid__container div {
   padding: 1rem;
 }
 
-.fler-button-div {
+.fler__button-div {
   display: flex;
   justify-content: center;
   background-color: white;
@@ -218,7 +218,7 @@ nav > ul > li {
   padding: 1rem;
 }
 
-.fler-button-div button {
+.fler__button-div button {
   padding: 1rem;
   border: none;
   border-radius: 0.5rem;
@@ -228,17 +228,17 @@ nav > ul > li {
   cursor: pointer;
 }
 
-.fler-button-div button:hover {
+.fler__button-div button:hover {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   transform: scale(1.05);
 }
 
-.item-1,
-.item-2,
-.item-3,
-.item-4,
-.item-5,
-.item-6 {
+.item__1,
+.item__2,
+.item__3,
+.item__4,
+.item__5,
+.item__6 {
   display: flex;
   flex-direction: column;
   border-radius: 0.2rem;
@@ -246,28 +246,28 @@ nav > ul > li {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.item-1:hover,
-.item-2:hover,
-.item-3:hover,
-.item-4:hover,
-.item-5:hover,
-.item-6:hover {
+.item__1:hover,
+.item__2:hover,
+.item__3:hover,
+.item__4:hover,
+.item__5:hover,
+.item__6:hover {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
   transform: scale(1.05);
 }
 
-.item-1 div,
-.item-2 div,
-.item-3 div,
-.item-4 div,
-.item-5 div,
-.item-6 div {
+.item__1 div,
+.item__2 div,
+.item__3 div,
+.item__4 div,
+.item__5 div,
+.item__6 div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0.3rem;
 }
 
-.hero-section-two {
+.hero__section-two {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -278,7 +278,7 @@ nav > ul > li {
   background-color: white;
 }
 
-.plant-div {
+.plant__div {
   background-color: #0a846e;
   display: flex;
   justify-content: center;
@@ -287,16 +287,16 @@ nav > ul > li {
   border-radius: 50%;
 }
 
-.plant-div img {
+.plant__div img {
   height: 100px;
   width: 100px;
 }
 
-.hero-section-one--two--text-div > * {
+.hero__section-one--two--text-div > * {
   padding: 0.5rem;
 }
 
-.hero-section-one--two--text-div > button {
+.hero__section-one--two--text-div > button {
   background-color: #0a846e;
   border: none;
   margin-left: 0.3rem;
@@ -304,7 +304,7 @@ nav > ul > li {
   border-radius: 0.2rem;
 }
 
-.footer--div {
+.footer__div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2;
@@ -333,11 +333,11 @@ nav > ul > li {
   min-height: 300px;
 }
 
-.footer--div div img {
+.footer__div div img {
   width: 100px;
 }
 
-.contact-info {
+.contact__info {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -358,7 +358,7 @@ footer {
   background-position: center; */
 }
 
-.footer-left {
+.footer__left {
   grid-column: 1 / 1;
   grid-row: 1 / 4;
   width: 100%;
@@ -371,11 +371,11 @@ footer {
   background-color: black;
 }
 
-.footer-left-first {
+.footer__left-first {
   grid-column: 2 / 3;
 }
 
-.footer-left-second {
+.footer__left-second {
   grid-column: 1 / 4;
   width: 100%;
   display: flex;
@@ -383,7 +383,7 @@ footer {
   align-items: center;
 }
 
-.footer-right {
+.footer__right {
   grid-column: 2 / 2;
   grid-row: 1 / 4;
   width: 100%;
