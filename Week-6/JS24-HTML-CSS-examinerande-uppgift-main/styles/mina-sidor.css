@@ -9,7 +9,7 @@
   }
 }
 
-.hero-section {
+.hero__section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   text-shadow: 0.1px 0.1px 0.1px black;
 }
 
-.lagg-till-plantering {
+.lagg__till-plantering {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
