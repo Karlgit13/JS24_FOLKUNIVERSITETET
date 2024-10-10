@@ -347,7 +347,7 @@ nav > ul > li {
 footer {
   width: 100%;
   max-width: 1000px;
-  min-height: 300px;
+  
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
