@@ -12,15 +12,16 @@
     <header class="header">
         <nav class="nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Planer</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Historik</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Tips</a></li>
-                <li class="header__nav-item"><a href="index.html" class="header__nav-link">Logga ut</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">PLANER</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">HISTORIK</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">TIPS</a></li>
+                <li class="header__nav-item"><a href="index.html" class="header__nav-link">LOGGA UT</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
+        <img class="burger__menu" src="assets/burger-menu.png" alt="" style="width: 30px;">
         <img src="assets/Logo.svg" alt="">
         <h1 class="hero__title" style="color: white;">Mina sidor</h1>
     </section>
@@ -36,7 +37,7 @@
                 <label for="date" class="planting__label">Datum: <br></label>
                 <input type="date" id="date" name="date" class="planting__input">
             </div>
-            <button type="submit" class="btn btn--primary">Lägg till</button>
+            <button type="submit" class="btn btn--primary">LÄGG TILL</button>
         </form>
     </section>
     <div>
@@ -44,41 +45,72 @@
     </div>
 
 
-    <section class="plantings">
-        <h2 class="plantings__title">Dina planerade planteringar:</h2>
-        <div class="plant-card">
-            <img src="assets/plant.svg" alt="Gurka" class="plant-card__image">
-            <div class="plant-card__details">
-                <h3 class="plant-card__name">Gurka</h3>
-                <p class="plant-card__date">15 april 2024</p>
-                <p class="plant-card__author">Rico Coello</p>
-                <button class="btn btn--danger plant-card__remove-btn">Ta bort</button>
-            </div>
-        </div>
-    </section>
+    <section class="grid__container">
 
-    <section class="plantings">
-        <h2 class="plantings__title">Dina planerade planteringar:</h2>
-        <div class="plant-card">
-            <img src="assets/plant.svg" alt="Gurka" class="plant-card__image">
-            <div class="plant-card__details">
-                <h3 class="plant-card__name">Gurka</h3>
-                <p class="plant-card__date">15 april 2024</p>
-                <p class="plant-card__author">Rico Coello</p>
-                <button class="btn btn--danger plant-card__remove-btn">Ta bort</button>
+        <div style="grid-column: 1 / 4; font-size: 24px;">
+            <h3 class="grid__item-title">Dina planerade planteringar:</h3>
+        </div>
+        <div class="item__1">
+            <img class="grid__item-image" src="assets/gurka.jpg" alt="">
+            <div>
+                <p class="title">Gurka</p>
+                <p class="date">15 april 2024</p>
             </div>
+            <div>
+                <p>Rico coolio</p>
+                <button class="trash__button">TA BORT</button>
+                <img class="trash__logo" src="assets/Vector (Stroke).png" alt=""
+                    style="width: 20px; height: 20px; margin-left: 60px; cursor: pointer;">
+            </div>
+            <hr>
+        </div>
+        <div class="plant__header-div">
+            <h3 class="grid__item-title">Dina planterade planteringar:</h3>
+        </div>
+        <div class="item__2">
+            <img class="grid__item-image" src="assets/gurka.jpg" alt="">
+            <div>
+                <p class="title">Gurka</p>
+                <p class="date">15 april 2024</p>
+            </div>
+            <div>
+                <p>Rico coolio</p>
+                <button class="trash__button">TA BORT</button>
+                <img class="trash__logo" src="assets/Vector (Stroke).png" alt=""
+                    style="width: 20px; height: 20px; margin-left: 60px; cursor: pointer;">
+            </div>
+            <hr>
+        </div>
+        <div class="item__3">
+            <img class="grid__item-image" src="assets/gurka.jpg" alt="">
+            <div>
+                <p class="title">Gurka</p>
+                <p class="date">15 april 2024</p>
+            </div>
+            <div>
+                <p>Rico coolio</p>
+                <button class="trash__button">TA BORT</button>
+                <img class="trash__logo" src="assets/Vector (Stroke).png" alt=""
+                    style="width: 20px; height: 20px; margin-left: 60px; cursor: pointer;">
+            </div>
+            <hr>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer__images">
-            <img src="footer1.jpg" alt="Image 1" class="footer__image">
-            <img src="footer2.jpg" alt="Image 2" class="footer__image">
-            <img src="footer3.jpg" alt="Image 3" class="footer__image">
-            <img src="footer4.jpg" alt="Image 4" class="footer__image">
+            <img src="assets/footer-image1.jpg" alt="Image 1" class="footer__image">
+            <img src="assets/footer-image2.jpg" alt="Image 2" class="footer__image">
+            <img src="assets/footer-image3.jpg" alt="Image 3" class="footer__image">
+            <img src="assets/footer-image4.jpg" alt="Image 4" class="footer__image">
         </div>
-        <a href="#" class="footer__link">Till toppen av sidan</a>
+
+
     </footer>
+    <div class="to__top">
+        <a href="minaSidor.html" class="footer__link">Till toppen av sidan</a>
+    </div>
+
 </body>
 
 </html>
