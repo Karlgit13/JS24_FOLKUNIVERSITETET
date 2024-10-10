@@ -5,44 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mina Sidor</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/mina-sidor.css">
 </head>
 
 <body>
     <header class="header">
-        <nav class="header__nav">
+        <nav class="nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="#" class="header__nav-link">Planer</a></li>
                 <li class="header__nav-item"><a href="#" class="header__nav-link">Historik</a></li>
                 <li class="header__nav-item"><a href="#" class="header__nav-link">Tips</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Logga ut</a></li>
+                <li class="header__nav-item"><a href="index.html" class="header__nav-link">Logga ut</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1 class="hero__title">Mina sidor</h1>
+        <img src="assets/Logo.svg" alt="">
+        <h1 class="hero__title" style="color: white;">Mina sidor</h1>
     </section>
 
     <section class="planting">
         <h2 class="planting__title">Lägg till ny plantering:</h2>
         <form class="planting__form">
             <div class="planting__form-group">
-                <label for="plant" class="planting__label">Planta:</label>
+                <label for="plant" class="planting__label">Planta: <br></label>
                 <input type="text" id="plant" name="plant" class="planting__input">
             </div>
             <div class="planting__form-group">
-                <label for="date" class="planting__label">Datum:</label>
+                <label for="date" class="planting__label">Datum: <br></label>
                 <input type="date" id="date" name="date" class="planting__input">
             </div>
             <button type="submit" class="btn btn--primary">Lägg till</button>
         </form>
     </section>
+    <div>
+
+    </div>
+
 
     <section class="plantings">
         <h2 class="plantings__title">Dina planerade planteringar:</h2>
         <div class="plant-card">
-            <img src="plant.jpg" alt="Gurka" class="plant-card__image">
+            <img src="assets/plant.svg" alt="Gurka" class="plant-card__image">
             <div class="plant-card__details">
                 <h3 class="plant-card__name">Gurka</h3>
                 <p class="plant-card__date">15 april 2024</p>
@@ -53,9 +58,9 @@
     </section>
 
     <section class="plantings">
-        <h2 class="plantings__title">Dina planterade planteringar:</h2>
+        <h2 class="plantings__title">Dina planerade planteringar:</h2>
         <div class="plant-card">
-            <img src="plant.jpg" alt="Gurka" class="plant-card__image">
+            <img src="assets/plant.svg" alt="Gurka" class="plant-card__image">
             <div class="plant-card__details">
                 <h3 class="plant-card__name">Gurka</h3>
                 <p class="plant-card__date">15 april 2024</p>
