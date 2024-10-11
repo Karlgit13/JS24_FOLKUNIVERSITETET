@@ -6,6 +6,9 @@
   .trash__logo {
     display: none;
   }
+  footer {
+    min-height: 300px;
+  }
 }
 /* MOBILE */
 @media (max-width: 859px) {
@@ -97,5 +100,19 @@
   }
   footer > * {
     display: flex;
+  }
+
+  .to__top {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    background-color: white;
+    padding: 1rem;
+  }
+  
+  .to__top a {
+    text-decoration: none;
+    color: black;
   }
 }

@@ -118,6 +118,14 @@
     border-radius: 0.2rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+
+  .overlay__logo {
+    position: absolute;
+    width: 60px;
+    top: 25px;
+    right: 87px;
   }
 
   .item__1:hover,
@@ -353,6 +361,12 @@
     border-radius: 0.2rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+
+  .overlay__logo {
+    position: absolute;
+    padding: 2rem;
   }
 
   .item__1:hover,

@@ -244,6 +244,12 @@ nav > ul > li {
   border-radius: 0.2rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.overlay__logo {
+  position: absolute;
+  padding: 2rem;
 }
 
 .item__1:hover,
@@ -347,7 +353,6 @@ nav > ul > li {
 footer {
   width: 100%;
   max-width: 1000px;
-  
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -391,4 +396,18 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.to__top {
+  width: 1000px;
+  text-align: center;
+  font-size: 24px;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+}
+
+.to__top a {
+  text-decoration: none;
+  color: black;
 }
