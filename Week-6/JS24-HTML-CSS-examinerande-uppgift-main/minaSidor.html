@@ -32,89 +32,89 @@
         <section class="planting">
             <h2 class="planting__title">Lägg till ny plantering:</h2>
             <form class="planting__form" action="#" method="post">
-                <div class="planting__form-group">
+                <fieldset class="planting__form-group">
                     <label for="plant" class="planting__label">Planta:</label>
                     <input type="text" id="plant" name="plant" class="planting__input">
-                </div>
-                <div class="planting__form-group">
+                </fieldset>
+                <fieldset class="planting__form-group">
                     <label for="date" class="planting__label">Datum:</label>
                     <input type="date" id="date" name="date" class="planting__input">
-                </div>
+                </fieldset>
                 <button type="submit" class="btn btn--primary">LÄGG TILL</button>
             </form>
         </section>
 
         <section class="grid__container">
-            <div style="grid-column: 1 / 4; font-size: 24px;">
+            <header style="grid-column: 1 / 4; font-size: 24px;">
                 <h3 class="grid__item-title">Dina planerade planteringar:</h3>
-            </div>
+            </header>
 
             <article class="item__1">
                 <img class="grid__item-image" src="assets/gurka.jpg" alt="Bild på gurka">
                 <img class="overlay__logo" src="assets/plant.svg" alt="Plantikon">
-                <div>
+                <section class="grid__flexy">
                     <p class="title">Gurka</p>
                     <p class="date">15 april 2024</p>
-                </div>
-                <div>
+                </section>
+                <section class="grid__flexy">
                     <p>Rico coolio</p>
                     <button class="trash__button">TA BORT</button>
                     <img class="trash__logo" src="assets/Vector (Stroke).png" alt="Papperskorg ikon"
                         style="width: 20px; height: 20px; margin-left: 60px; cursor: pointer;">
-                </div>
+                </section>
                 <hr>
             </article>
 
-            <div class="plant__header-div">
+            <header class="plant__header-div">
                 <h3 class="grid__item-title">Dina planterade planteringar:</h3>
-            </div>
+            </header>
 
             <article class="item__2">
                 <img class="grid__item-image" src="assets/gurka.jpg" alt="Bild på gurka">
                 <img class="overlay__logo" src="assets/plant.svg" alt="Plantikon">
-                <div>
+                <section>
                     <p class="title">Gurka</p>
                     <p class="date">15 april 2024</p>
-                </div>
-                <div>
+                </section>
+                <section>
                     <p>Rico coolio</p>
                     <button class="trash__button">TA BORT</button>
                     <img class="trash__logo" src="assets/Vector (Stroke).png" alt="Papperskorg ikon"
                         style="width: 20px; height: 20px; margin-left: 60px; cursor: pointer;">
-                </div>
+                </section>
                 <hr>
             </article>
 
             <article class="item__3">
                 <img class="grid__item-image" src="assets/gurka.jpg" alt="Bild på gurka">
                 <img class="overlay__logo" src="assets/plant.svg" alt="Plantikon">
-                <div>
+                <section>
                     <p class="title">Gurka</p>
                     <p class="date">15 april 2024</p>
-                </div>
-                <div>
+                </section>
+                <section>
                     <p>Rico coolio</p>
                     <button class="trash__button">TA BORT</button>
                     <img class="trash__logo" src="assets/Vector (Stroke).png" alt="Papperskorg ikon"
                         style="width: 20px; height: 20px; margin-left: 60px; cursor: pointer;">
-                </div>
+                </section>
                 <hr>
             </article>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__images">
+        <section class="footer__images">
             <img src="assets/footer-image1.jpg" alt="Bild 1" class="footer__image">
             <img src="assets/footer-image2.jpg" alt="Bild 2" class="footer__image">
             <img src="assets/footer-image3.jpg" alt="Bild 3" class="footer__image">
             <img src="assets/footer-image4.jpg" alt="Bild 4" class="footer__image">
-        </div>
+        </section>
     </footer>
 
-    <div class="to__top">
+    <aside class="to__top">
         <a href="minaSidor.html" class="footer__link">Till toppen av sidan</a>
-    </div>
+    </aside>
 
 </body>
 

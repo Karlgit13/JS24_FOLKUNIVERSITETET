@@ -5,6 +5,10 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.planting__form-group {
+  border: none;
+}
+
 /* MOBILE */
 @media (max-width: 668px) {
   body {
@@ -74,6 +78,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
+
+
   .grid__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -86,7 +92,7 @@
     padding-bottom: 3rem;
   }
 
-  .grid__container div button {
+  .grid__container section button {
     padding: 0.3rem 0rem;
     border: none;
     color: white;
@@ -98,8 +104,15 @@
     font-size: 18px;
   }
 
-  .grid__container div {
+  .grid__container section {
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .grid__flexy {
+    display: flex;
+    justify-content: space-between;
   }
 
   .grid__item-image {
@@ -209,6 +222,10 @@
 
 /* DESKTOP */
 @media (min-width: 668px) {
+
+  .trash__logo {
+    display: none;
+  }
   .burger__menu {
     display: none;
   }
