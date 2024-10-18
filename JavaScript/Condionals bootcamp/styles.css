@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  gap: 1rem;
+}
+
+section {
+    background-color: rgba(175, 175, 175, 0.726);
+    width: 50%;
+}
+
+div {
+    color: red;
+}
