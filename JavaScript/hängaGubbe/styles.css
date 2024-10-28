@@ -6,13 +6,34 @@
 
 body {
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#container {
+body div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#word-display,
+#incorrect-letters,
+#guess-input {
   padding: 1rem;
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+#guess-btn {
+  padding: 1rem;
+  width: 15rem;
+  margin-top: 1rem;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 1rem;
 }

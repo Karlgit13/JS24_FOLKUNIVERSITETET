@@ -1,89 +1,94 @@
-// Array av möjliga ord att slumpa fram som användaren ska gissa på
-const words = ["javascript", "programming", "hangman", "developer"];
 
-// Variabler för att lagra spelets nuvarande status
-let selectedWord;        // Ordet som spelaren ska gissa
-let guessedLetters;      // Array för lagring av rätt gissade bokstäver
-let wrongGuesses;        // Array för lagring av felaktiga gissningar
-let maxWrongGuesses;     // Max antal felaktiga gissningar innan spelet är över
+// variabler
+const words = ["javascript", "programmering", "kodning", "dator", "utveckling"];
+let selectedWord = words[Math.floor(Math.random() * words.length)]
+let guessedLetters = []
+let incorrectLetters = []
+let maxErrors = 6
+let errors = 0
 
-// Startar ett nytt spel med initiala värden
-function startGame() {
-    // Välj ett slumpmässigt ord från 'words'-arrayen
-    selectedWord = words[Math.floor(Math.random() * words.length)];
 
-    // Återställer listorna för gissade bokstäver och felaktiga gissningar
-    guessedLetters = [];
-    wrongGuesses = [];
+// html element
+const wordDisplay = document.getElementById("word-display")
+const incorrectLettersDisplay = document.getElementById("incorrect-letters")
+const guessInput = document.getElementById("guess-input")
+const guessBtn = document.getElementById("guess-btn")
 
-    // Sätter max antal felaktiga gissningar (t.ex. 6)
-    maxWrongGuesses = 6;
 
-    // Visa det tomma ordet och uppdatera felaktiga gissningar
-    displayWord();
-    displayWrongGuesses();
-
-    // Döljer "Spela igen"-knappen och rensar eventuellt meddelande från förra spelet
-    document.getElementById("play-again").style.display = "none";
-    document.getElementById("game-message").innerText = "";
+// funktion för uppdatera ordet som visas på skärmen
+const updateWordDisplay = () => {
+    const displayWord = selectedWord
+        .split("")
+        .map(letter => (guessedLetters.includes(letter) ? letter : "_"))
+        .join(" ")
+    wordDisplay.textContent = displayWord
 }
 
-// Visar ordet med rätt gissade bokstäver och "_" för de som ännu inte gissats
-function displayWord() {
-    const wordContainer = document.getElementById("word-container");
 
-    // Skapar en sträng där rätt gissade bokstäver visas och övriga är "_"
-    wordContainer.innerHTML = selectedWord
-        .split('')  // Delar upp ordet i en array med enskilda bokstäver
-        .map(letter => (guessedLetters.includes(letter) ? letter : '_')) // Visar bokstav om den är gissad, annars "_"
-        .join(' ');  // Slår ihop arrayen till en sträng med mellanslag mellan varje bokstav
-}
+// kontrollera gissningen
+const handleGuess = () => {
+    const guess = guessInput.value.toLowerCase()
+    guessInput.value = ""
 
-// Visar de felaktiga gissningarna och antal återstående försök
-function displayWrongGuesses() {
-    document.getElementById("wrong-guesses").innerText = `Felaktiga gissningar: ${wrongGuesses.join(', ')}`;
-}
-
-// Hanterar spelarens gissning när en bokstav skrivs in
-function handleGuess(letter) {
-    // Kolla om bokstaven redan har gissats (antingen rätt eller fel), och ignorera om så är fallet
-    if (guessedLetters.includes(letter) || wrongGuesses.includes(letter)) return;
-
-    // Om bokstaven finns i ordet, lägg till den till listan av rätt gissningar
-    if (selectedWord.includes(letter)) {
-        guessedLetters.push(letter);
-
-        // Kontrollera om alla bokstäver är gissade - om ja, visa vinstmeddelande
-        if (selectedWord.split('').every(letter => guessedLetters.includes(letter))) {
-            document.getElementById("game-message").innerText = "Du vann!";
-            document.getElementById("play-again").style.display = "block"; // Visa "Spela igen"-knappen
+    if (guess && !guessedLetters.includes(guess) && !incorrectLetters.includes(guess)) {
+        if (selectedWord.includes(guess)) {
+            guessedLetters.push(guess)
+        } else {
+            incorrectLetters.push(guess)
+            errors++
+            updateHangmanImage()
         }
-    } else {
-        // Om bokstaven inte finns i ordet, lägg till den till listan av felaktiga gissningar
-        wrongGuesses.push(letter);
-
-        // Kolla om spelaren har nått max antal felaktiga gissningar och förlorar spelet
-        if (wrongGuesses.length >= maxWrongGuesses) {
-            document.getElementById("game-message").innerText = `Du förlorade! Rätt ord var: ${selectedWord}`;
-            document.getElementById("play-again").style.display = "block"; // Visa "Spela igen"-knappen
-        }
+        updateWordDisplay()
+        updateIncorrectLettersDisplay()
+        checkGameStatus()
     }
-
-    // Uppdatera ordet och felaktiga gissningar efter varje gissning
-    displayWord();
-    displayWrongGuesses();
 }
 
-// Lägger till en händelse för tangenttryck (för att hantera spelarens gissning)
-document.addEventListener("keydown", (event) => {
-    const letter = event.key.toLowerCase(); // Hämtar nedtryckt tangent och omvandlar till liten bokstav
 
-    // Kontrollera om tangenten är en bokstav (a-z) innan vi hanterar gissningen
-    if (/^[a-z]$/.test(letter)) handleGuess(letter);
-});
+// uppdaterar visningen av felaktiga bokstäver
+const updateIncorrectLettersDisplay = () => {
+    incorrectLettersDisplay.textContent = `Felaktiga bokstäver: ${incorrectLetters.join(", ")}`
+}
 
-// Lägger till en händelse för "Spela igen"-knappen som startar om spelet
-document.getElementById("play-again").addEventListener("click", startGame);
 
-// Startar spelet när sidan laddas
-startGame();
+
+// kontrollera om spelaren har vunnit eller förlorat
+const checkGameStatus = () => {
+    if (selectedWord.split("").every(letter => guessedLetters.includes(letter))) {
+        alert("grattis du vann!")
+        resetGame()
+    } else if (errors >= maxErrors) {
+        alert(`Du förlorade! ordet var ${selectedWord}`)
+        resetGame()
+    }
+}
+
+
+
+// uppdaterar hangman SVG-bilden beroende på fel
+function updateHangmanImage() {
+    // Korrekt ordning: huvud, kropp, armar, ben
+    const parts = ["head", "body", "arms", "legs", "scaffold"];
+    if (errors > 0 && errors <= maxErrors) {
+        document.getElementById(parts[errors - 1]).style.display = "block";
+    }
+}
+
+
+
+// nollställer spelet
+const resetGame = () => {
+    selectedWord = words[Math.floor(Math.random() * words.length)]
+    guessedLetters = []
+    incorrectLetters = []
+    errors = 0
+    updateWordDisplay()
+    updateIncorrectLettersDisplay()
+    document.querySelectorAll("path, ellipse").forEach(part => (part.style.display = "none"))
+}
+
+
+
+guessBtn.addEventListener("click", handleGuess)
+updateWordDisplay()
+resetGame()
