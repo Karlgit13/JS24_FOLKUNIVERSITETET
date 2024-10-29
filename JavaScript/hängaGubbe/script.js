@@ -1,4 +1,8 @@
 
+
+
+
+// Alex
 // variabler
 const words = ["javascript", "programmering", "kodning", "dator", "utveckling"];
 let selectedWord = words[Math.floor(Math.random() * words.length)]
@@ -15,6 +19,20 @@ const guessInput = document.getElementById("guess-input")
 const guessBtn = document.getElementById("guess-btn")
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// LUM
 // funktion för uppdatera ordet som visas på skärmen
 const updateWordDisplay = () => {
     const displayWord = selectedWord
@@ -45,6 +63,26 @@ const handleGuess = () => {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Robin
 // uppdaterar visningen av felaktiga bokstäver
 const updateIncorrectLettersDisplay = () => {
     incorrectLettersDisplay.textContent = `Felaktiga bokstäver: ${incorrectLetters.join(", ")}`
@@ -65,6 +103,16 @@ const checkGameStatus = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+//kalle 
 // uppdaterar hangman SVG-bilden beroende på fel
 function updateHangmanImage() {
     // Korrekt ordning: huvud, kropp, armar, ben
@@ -73,6 +121,8 @@ function updateHangmanImage() {
         document.getElementById(parts[errors - 1]).style.display = "block";
     }
 }
+
+
 
 
 
