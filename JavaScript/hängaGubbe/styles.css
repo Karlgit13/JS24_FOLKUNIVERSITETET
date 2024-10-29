@@ -12,13 +12,13 @@ body {
   align-items: center;
 }
 
-body div {
+body section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-
 
 #word-display,
 #incorrect-letters,
