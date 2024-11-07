@@ -115,7 +115,6 @@ const checkGameStatus = () => {
 //kalle 
 // uppdaterar hangman SVG-bilden beroende på fel
 function updateHangmanImage() {
-    // Korrekt ordning: huvud, kropp, armar, ben
     const parts = ["head", "body", "arms", "legs"];
     if (errors > 0 && errors <= maxErrors) {
         document.getElementById(parts[errors - 1]).style.display = "block";
