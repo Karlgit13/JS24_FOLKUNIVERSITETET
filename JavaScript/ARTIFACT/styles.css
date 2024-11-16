@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 24px;
+}
+
+div > * {
+  padding: 1rem;
+}
+
+#controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2;
+  gap: 0.5rem;
+}
+
+span {
+  color: red;
+}
+
+button {
+  background-color: rgba(10, 156, 10, 0.63);
+}
+
+
+#player-info {
+    display: flex;
+}

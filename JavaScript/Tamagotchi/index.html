@@ -11,17 +11,22 @@
 
 <body>
     <div class="container">
-        <div class="pet" id="pet"></div>
-        <div class="status">
-            <p>Hunger <span id="hunger">50</span></p>
-            <p>happy <span id="fun">50</span></p>
-            <p>Energy <span id="energy">50</span></p>
+        <div id="pet" style="width: 100px; height: 100px; background: green;"></div>
+        <div id="pet-container">
+            <p>Hunger: <span id="hunger">50</span></p>
+            <p>Fun: <span id="fun">50</span></p>
+            <p>Energy: <span id="energy">50</span></p>
         </div>
-        <div class="controls">
-            <button onclick="action('feed')">Mata</button>
-            <button onclick="action('play')">Leka</button>
-            <button onclick="action('sleep')">Sova</button>
-        </div>
+
+
+        <button onclick="action('feed')">Feed</button>
+        <button onclick="action('play')">Play</button>
+        <button onclick="action('sleep')">Sleep</button>
+
+        <input id="cityInput" placeholder="Enter city name" />
+        <button onclick="getWeather()">Check Weather</button>
+
+        <p id="weatherMessage"></p>
 
     </div>
 </body>

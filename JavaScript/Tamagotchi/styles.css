@@ -24,3 +24,13 @@ body * {
   background: blue;
   justify-self: center;
 }
+
+#weatherMessage {
+  font-size: 24px;
+}
+
+#pet-container {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
