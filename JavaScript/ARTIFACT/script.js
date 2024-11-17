@@ -4,18 +4,29 @@ const token =
     'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthcmwudmFyZXNrb2dAZ21haWwuY29tIiwicGFzc3dvcmRfY2hhbmdlZCI6IiJ9.w9uFikrqZu0CsUrSxXINg3EFB5yB5_tkAW5g_klLFNs';
 
 
-// html selector
+// HTML-SELECTORS
 const playerInfo = document.getElementById("player-info")
 const playerName = document.getElementById("player-name")
 const cooldownTimer = document.getElementById("coolown-timer")
 const playerPosition = document.getElementById("player-position")
 const characterLevel = document.getElementById("player-level")
+const dropdownButton = document.getElementById("dropdown-button")
+const dropdownMenu = document.getElementById("dropdown-content")
+const restInformation = document.getElementById("rest-information")
+const playerHealth = document.getElementById("player-health")
 
+
+
+
+// VARIABLER
 let characterName = ""
 let currentX = 0
 let currentY = 0
 let cooldownTime = 10
 let cooldownInterval;
+
+
+
 
 
 
@@ -33,6 +44,18 @@ function startCooldown() {
         }
     }, 1000);
 }
+
+
+
+
+
+
+
+
+
+// FUNKTIONER
+
+
 
 // hämtar karaktär information
 async function getCharInfo() {
@@ -63,14 +86,13 @@ async function getCharInfo() {
         // cooldownTimer.textContent = character.cooldown
         playerPosition.textContent = `X: ${currentX}, Y: ${currentY}`
         characterLevel.textContent = character.level
+        playerHealth.textContent = character.hp
 
     }
     catch (error) {
         console.error(error)
     }
 }
-
-
 
 async function move(direction) {
 
@@ -116,5 +138,67 @@ async function move(direction) {
 }
 
 
+// gå till banken
+async function moveToPosition(x, y) {
+    const url = server + "/my/" + characterName + "/action/move"
+    const options = {
+        method: "POST",
+        headers: {
+            "content-type": "application/json",
+            Accept: "application/json",
+            Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthcmwudmFyZXNrb2dAZ21haWwuY29tIiwicGFzc3dvcmRfY2hhbmdlZCI6IiJ9.w9uFikrqZu0CsUrSxXINg3EFB5yB5_tkAW5g_klLFNs"
+        },
+        body: JSON.stringify({ x, y })
+    }
 
+    try {
+        const response = await fetch(url, options)
+        const data = await response.json()
+        console.log(data);
+        await getCharInfo()
+    }
+    catch (error) {
+        console.error(error)
+    }
+
+
+}
+
+
+async function rest(params) {
+    const url = 'https://api.artifactsmmo.com/my/karlgit/action/rest';
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthcmwudmFyZXNrb2dAZ21haWwuY29tIiwicGFzc3dvcmRfY2hhbmdlZCI6IiJ9.w9uFikrqZu0CsUrSxXINg3EFB5yB5_tkAW5g_klLFNs'
+        },
+        body: undefined
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        console.log(data);
+
+
+        restInformation.textContent = "HP restored: " + data.data.hp_restored
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+
+async function gatherRss() {
+    
+    
+}
+
+
+
+
+// KALLAR PÅ FUNKTION
 getCharInfo()

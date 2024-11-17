@@ -21,21 +21,26 @@
             <p>Position: <span id="player-position"></span></p>
             <p>Cooldown: <span id="coolown-timer"></span></p>
             <p>Level: <span id="player-level"></span></p>
+            <p>Health: <span id="player-health"></span></p>
         </div>
         <div id="controls">
-            <button onclick="move('up')">Upp</button>
-            <button onclick="move('right')">Höger</button>
-            <button onclick="move('down')">Ner</button>
-            <button onclick="move('left')">Vänster</button>
+            <button onclick="move('up')">UP</button>
+            <button onclick="move('right')">RIGHT</button>
+            <button onclick="move('down')">DOWN</button>
+            <button onclick="move('left')">LEFT</button>
 
         </div>
         <div id="actions">
-            <button id="rest">Vila</button>
-            <button id="gather-rss">Samla rss</button>
+            <button onclick="rest()" id="rest">REST</button>
+            <div id="rest-information">
+
+            </div>
+            <button onclick="gatherRss()" id="gather-rss">GATHER-RSS</button>
+            <div id="gather-result"></div>
         </div>
         <div id="quick-nav">
-            <button id="go-to-building1">Gå till byggnad 1</button>
-            <button id="go-to-building2">Gå till byggnad 2</button>
+            <button onclick="moveToPosition(4, 1)" id="go-to-building1">GO TO BANK</button>
+            <button onclick="moveToPosition(2, 3)" id="go-to-building2">GO TO ALCHEMY</button>
         </div>
     </div>
 
