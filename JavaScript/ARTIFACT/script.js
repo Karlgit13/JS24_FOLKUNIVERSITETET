@@ -23,6 +23,7 @@ const dropdownMenu = document.getElementById("dropdown-content")
 const restInformation = document.getElementById("rest-information")
 const playerHealth = document.getElementById("player-health")
 const fightResult = document.getElementById("fight-result")
+const gatherResult = document.getElementById("gather-result")
 
 
 
@@ -232,6 +233,37 @@ async function fight(monster) {
 
 async function gatherRss() {
 
+    await moveToPosition(2, 0)
+
+    console.log("waiting on cooldown")
+    await new Promise(resolve => setTimeout(resolve, 10000))
+
+    const url = 'https://api.artifactsmmo.com/my/karlgit/action/gathering';
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthcmwudmFyZXNrb2dAZ21haWwuY29tIiwicGFzc3dvcmRfY2hhbmdlZCI6IiJ9.w9uFikrqZu0CsUrSxXINg3EFB5yB5_tkAW5g_klLFNs'
+        },
+        body: undefined
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        console.log("Gathering response: ", data);
+
+        const cooldownSeconds = data.data.cooldown.remaining_seconds
+        startCooldown(cooldownSeconds)
+        gatherResult.innerHTML = `
+        XP gained:  <span>${data.data.details.xp}</span>
+        Item mined:  <span>${data.data.details.items[0].code}</span>
+        `
+
+    } catch (error) {
+        console.error(error);
+    }
 
 }
 
