@@ -218,6 +218,7 @@ async function fight(monster) {
         console.log("Fighting response: ", fightResponse)
         fightResult.innerHTML = `
         Result: <span>${fightResponse.fight.result}</span>
+        
         XP gained: <span>${fightResponse.fight.xp}</span>
         Gold gailed: <span>${fightResponse.fight.gold}</span>
         `
