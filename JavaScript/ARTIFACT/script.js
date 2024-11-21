@@ -1,7 +1,15 @@
+
+// GLOBALA VARIABLER
+let characterName = ""
+let currentX = 0
+let currentY = 0
+let cooldownTime = 10
+let cooldownInterval;
 const server = 'https://api.artifactsmmo.com';
-// Använd ditt riktiga token här
 const token =
     'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthcmwudmFyZXNrb2dAZ21haWwuY29tIiwicGFzc3dvcmRfY2hhbmdlZCI6IiJ9.w9uFikrqZu0CsUrSxXINg3EFB5yB5_tkAW5g_klLFNs';
+
+
 
 
 // HTML-SELECTORS
@@ -14,37 +22,7 @@ const dropdownButton = document.getElementById("dropdown-button")
 const dropdownMenu = document.getElementById("dropdown-content")
 const restInformation = document.getElementById("rest-information")
 const playerHealth = document.getElementById("player-health")
-
-
-
-
-// VARIABLER
-let characterName = ""
-let currentX = 0
-let currentY = 0
-let cooldownTime = 10
-let cooldownInterval;
-
-
-
-
-
-
-function startCooldown() {
-    cooldownTime = 10
-    cooldownTimer.textContent = `${cooldownTime}s`;
-
-    cooldownInterval = setInterval(() => {
-        if (cooldownTime > 0) {
-            cooldownTime -= 1
-            cooldownTimer.textContent = `${cooldownTime}s`
-        }
-        else {
-            clearInterval(cooldownInterval)
-        }
-    }, 1000);
-}
-
+const fightResult = document.getElementById("fight-result")
 
 
 
@@ -55,6 +33,22 @@ function startCooldown() {
 
 // FUNKTIONER
 
+
+function startCooldown(cooldownSeconds) {
+    cooldownTime = cooldownSeconds;
+    cooldownTimer.textContent = `${cooldownTime}s`;
+
+    clearInterval(cooldownInterval);
+
+    cooldownInterval = setInterval(() => {
+        if (cooldownTime > 0) {
+            cooldownTime -= 1;
+            cooldownTimer.textContent = `${cooldownTime}s`;
+        } else {
+            clearInterval(cooldownInterval);
+        }
+    }, 1000);
+}
 
 
 // hämtar karaktär information
@@ -74,7 +68,7 @@ async function getCharInfo() {
             throw new Error(`HTTP error Status: ${response.status}`)
         }
         const data = await response.json()
-        console.log("Character data: ", data.data[0]);
+        console.log("Character data response: ", data.data[0]);
         const character = data.data[0]
         characterName = character.name
         currentX = character.x
@@ -125,7 +119,7 @@ async function move(direction) {
         console.log("move response: ", data);
 
         await getCharInfo()
-        startCooldown()
+        startCooldown(6)
 
         if (data.cooldown !== undefined) {
             cooldownTimer.textContent = data.cooldown
@@ -133,12 +127,12 @@ async function move(direction) {
 
 
     } catch (error) {
-        console.error(error)
+        alert("cooldown")
     }
 }
 
 
-// gå till banken
+// gå till banken eller Alchemy
 async function moveToPosition(x, y) {
     const url = server + "/my/" + characterName + "/action/move"
     const options = {
@@ -154,11 +148,11 @@ async function moveToPosition(x, y) {
     try {
         const response = await fetch(url, options)
         const data = await response.json()
-        console.log(data);
+        console.log("Move to position response: " + data);
         await getCharInfo()
     }
     catch (error) {
-        console.error(error)
+        alert("cooldown")
     }
 
 
@@ -166,7 +160,7 @@ async function moveToPosition(x, y) {
 
 
 async function rest(params) {
-    const url = 'https://api.artifactsmmo.com/my/karlgit/action/rest';
+    const url = server + "/my/" + characterName + "/action/rest"
     const options = {
         method: 'POST',
         headers: {
@@ -180,21 +174,65 @@ async function rest(params) {
     try {
         const response = await fetch(url, options);
         const data = await response.json();
-        console.log(data);
+        const restResponse = data.data
+        console.log("Resting response: ", restResponse);
 
 
         restInformation.textContent = "HP restored: " + data.data.hp_restored
+        await getCharInfo()
+        const cooldownSeconds = restResponse.cooldown.remaining_seconds
+        startCooldown(cooldownSeconds)
 
     } catch (error) {
-        console.error(error);
+        alert("cooldown")
+    }
+}
+
+
+async function fight(monster) {
+    if (monster === "chicken") await moveToPosition(0, 1)
+    if (monster === "cow") await moveToPosition(0, 2)
+
+
+    console.log("waiting for cooldown")
+    await new Promise(resolve => setTimeout(resolve, 10000))
+
+    const url = server + "/my/" + characterName + "/action/fight"
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthcmwudmFyZXNrb2dAZ21haWwuY29tIiwicGFzc3dvcmRfY2hhbmdlZCI6IiJ9.w9uFikrqZu0CsUrSxXINg3EFB5yB5_tkAW5g_klLFNs'
+        },
+        body: undefined
+    };
+
+    try {
+        const response = await fetch(url, options)
+        const data = await response.json()
+        const fightResponse = data.data
+        const cooldownSeconds = fightResponse.cooldown.remaining_seconds;
+        startCooldown(cooldownSeconds);
+        console.log("Fighting response: ", fightResponse)
+        fightResult.innerHTML = `
+        Result: <span>${fightResponse.fight.result}</span>
+        XP gained: <span>${fightResponse.fight.xp}</span>
+        Gold gailed: <span>${fightResponse.fight.gold}</span>
+        `
+
+
+
+    } catch (error) {
+        alert("cooldown")
     }
 }
 
 
 
 async function gatherRss() {
-    
-    
+
+
 }
 
 
