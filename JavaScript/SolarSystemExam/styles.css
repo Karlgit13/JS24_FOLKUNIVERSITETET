@@ -1,10 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
   background-color: #111;
   color: #fff;
   margin: 0;
   padding: 0;
+  position: relative; /* Lägg till denna rad */
 }
+
 #planet-container {
   display: flex;
   flex-wrap: wrap;
@@ -18,18 +19,20 @@ body {
   cursor: pointer;
   text-align: center;
   width: 150px;
+  position: relative;
 }
 #overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white(0, 0, 0, 0.8);
+  color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+#overlay h2 {
+  margin-bottom: 10px;
+}
+
 .hidden {
   display: none;
 }
