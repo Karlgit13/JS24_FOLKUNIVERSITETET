@@ -1,5 +1,5 @@
 // IMPORTERAR FETCH FUNKTIONER
-import { getApiKey, getBodies } from "./modules/api.js";
+import { getApiKey, getBodies } from "./modules/api.js"
 // INITIERA KEY OCH BODIES
 const init = async () => {
     try {
@@ -27,43 +27,43 @@ const displayPlanets = (bodies) => {
 
 
             if (body.name === "Merkurius") {
-                planetDiv.style.backgroundImage = `url('assets/merkurius.jpeg')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/merkurius.jpeg')`
+                planetDiv.style.backgroundSize = "cover"     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center" // Centrerar bilden
             } else if (body.name === "Venus") {
-                planetDiv.style.backgroundImage = `url('assets/venus.webp')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/venus.webp')`
+                planetDiv.style.backgroundSize = "cover"
+                planetDiv.style.backgroundPosition = "center"
             }
             else if (body.name === "Jorden") {
-                planetDiv.style.backgroundImage = `url('assets/jorden.webp')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/jorden.webp')`
+                planetDiv.style.backgroundSize = "cover"
+                planetDiv.style.backgroundPosition = "center"
             }
             else if (body.name === "Mars") {
-                planetDiv.style.backgroundImage = `url('assets/mars.webp')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/mars.webp')`
+                planetDiv.style.backgroundSize = "cover"
+                planetDiv.style.backgroundPosition = "center"
             }
             else if (body.name === "Jupiter") {
-                planetDiv.style.backgroundImage = `url('assets/jupiter.webp')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/jupiter.webp')`
+                planetDiv.style.backgroundSize = "cover"
+                planetDiv.style.backgroundPosition = "center"
             }
             else if (body.name === "Saturnus") {
-                planetDiv.style.backgroundImage = `url('assets/saturnus.webp')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/saturnus.webp')`
+                planetDiv.style.backgroundSize = "cover"
+                planetDiv.style.backgroundPosition = "center"
             }
             else if (body.name === "Uranus") {
-                planetDiv.style.backgroundImage = `url('assets/uranus.webp')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/uranus.webp')`
+                planetDiv.style.backgroundSize = "cover"
+                planetDiv.style.backgroundPosition = "center"
             }
             else if (body.name === "Neptunus") {
-                planetDiv.style.backgroundImage = `url('assets/neptunus.webp')`;
-                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
-                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+                planetDiv.style.backgroundImage = `url('assets/neptunus.webp')`
+                planetDiv.style.backgroundSize = "cover"
+                planetDiv.style.backgroundPosition = "center"
             }
         }
     })
@@ -80,6 +80,7 @@ const showOverlay = (body) => {
         <p>${body.desc}</p>
         <p><strong>Omkrets:</strong> ${body.circumference} km</p>
         <p><strong>Dygnets längd:</strong> ${body.rotation} jorddygn</p>
+        <p><strong>Omloppsperiod:</strong> ${body.orbitalPeriod}</p>
         <p><strong>Temperatur:</strong> Dag: ${body.temp.day}°C, Natt: ${body.temp.night}°C</p>
         <button onclick="closeOverlay()">Stäng</button>
     `
