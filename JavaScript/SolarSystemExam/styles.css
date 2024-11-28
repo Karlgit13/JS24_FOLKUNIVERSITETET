@@ -3,7 +3,12 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  position: relative; /* Lägg till denna rad */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 #planet-container {
@@ -12,14 +17,25 @@ body {
   justify-content: center;
 }
 .planet {
-  margin: 10px;
-  padding: 20px;
-  background-color: #222;
-  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  background-color: #444;
+  border-radius: 50%;
   cursor: pointer;
-  text-align: center;
-  width: 150px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: radial-gradient(circle at 30% 30%, #666, #222);
+}
+
+.planet:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 #overlay {
   color: white;
@@ -27,6 +43,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 800px;
+  font-size: 22px;
 }
 
 #overlay h2 {
@@ -34,5 +52,5 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }

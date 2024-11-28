@@ -1,22 +1,5 @@
-// HÄMTA API NYKEL
-const getApiKey = async () => {
-    const response = await fetch("https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys", {
-        method: "POST"
-    })
-    const data = await response.json()
-    console.log(data)
-    return data.key
-}
-
-// HÄMTA BODIES
-const getBodies = async (apiKey) => {
-    const response = await fetch("https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies", {
-        method: "GET",
-        headers: { "x-zocom": apiKey }
-    })
-    return response.json()
-}
-
+// IMPORTERAR FETCH FUNKTIONER
+import { getApiKey, getBodies } from "./modules/api.js";
 // INITIERA KEY OCH BODIES
 const init = async () => {
     try {
@@ -38,10 +21,50 @@ const displayPlanets = (bodies) => {
         if (body.type === "planet") {
             const planetDiv = document.createElement("div")
             planetDiv.classList.add("planet")
-            planetDiv.innerText = body.name
             planetDiv.addEventListener("click", () => showOverlay(body))
             container.appendChild(planetDiv)
-            console.log("Visar planet:", body.name)  // Lägg till denna rad
+            console.log("Visar planet:", body.name)
+
+
+            if (body.name === "Merkurius") {
+                planetDiv.style.backgroundImage = `url('assets/merkurius.jpeg')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            } else if (body.name === "Venus") {
+                planetDiv.style.backgroundImage = `url('assets/venus.webp')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            }
+            else if (body.name === "Jorden") {
+                planetDiv.style.backgroundImage = `url('assets/jorden.webp')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            }
+            else if (body.name === "Mars") {
+                planetDiv.style.backgroundImage = `url('assets/mars.webp')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            }
+            else if (body.name === "Jupiter") {
+                planetDiv.style.backgroundImage = `url('assets/jupiter.webp')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            }
+            else if (body.name === "Saturnus") {
+                planetDiv.style.backgroundImage = `url('assets/saturnus.webp')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            }
+            else if (body.name === "Uranus") {
+                planetDiv.style.backgroundImage = `url('assets/uranus.webp')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            }
+            else if (body.name === "Neptunus") {
+                planetDiv.style.backgroundImage = `url('assets/neptunus.webp')`;
+                planetDiv.style.backgroundSize = "cover";     // Täcker hela div:en
+                planetDiv.style.backgroundPosition = "center"; // Centrerar bilden
+            }
         }
     })
 }
@@ -68,5 +91,6 @@ const showOverlay = (body) => {
 const closeOverlay = () => {
     document.getElementById("overlay").classList.add("hidden")
 }
+window.closeOverlay = closeOverlay
 
 init()
