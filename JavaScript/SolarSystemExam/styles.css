@@ -1,5 +1,5 @@
 body {
-  background-color: #111;
+  background: linear-gradient(to bottom, #0c164d, #190b22);
   color: #fff;
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
+  height: 100vh;
 }
 
 #planet-container {
@@ -38,13 +38,31 @@ body {
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 #overlay {
+  position: fixed;
+  background: linear-gradient(to bottom, #0c164d, #190b22);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
   color: white;
   display: flex;
+  justify-content: left;
+  align-items: left;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 800px;
+  padding: 11rem 30rem;
   font-size: 22px;
+}
+#overlay h1,
+#overlay h2 {
+}
+
+#overlay p {
+  max-width: 1000px;
+}
+#overlay h2 {
+  color: yellow;
+  margin-top: -15px;
 }
 
 #overlay h2 {
@@ -59,8 +77,48 @@ body {
   font-size: 20px;
   background-color: lightblue;
   margin-top: 10px;
+  max-width: 100px;
 }
 
 .hidden {
   display: none !important;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+}
+hr {
+  border: none; /* Tar bort standardgränsen */
+  height: 1px; /* Tjockleken på linjen */
+  background-color: #fff; /* Färgen på linjen */
+  margin: 20px 0; /* Utrymme ovanför och under linjen */
+  width: 80%; /* Bredden på linjen */
+  max-width: 1000px;
+}
+
+.merkurius {
+    width: 40px;
+    height: 40px;
+}
+
+.solen {
+  position: fixed;
+  left: -500px;
+  top: 0;
+  width: 600px;
+  height: 1000px;
+}
+
+
+.venus {
+    width: 50px;
+    height: 50px;
+}
+
+.jorden {
+    width: 60px;
+    height: 60px;
 }
