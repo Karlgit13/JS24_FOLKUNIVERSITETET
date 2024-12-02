@@ -28,7 +28,7 @@ const init = async () => {
 const displayPlanets = (bodies) => {
     const container = document.getElementById("planet-container")   // HÄMTAR HTML ELEMENT
     bodies.forEach(body => {    // LOOPAR IGENOM VARJE OBJEKT I BODIES ARRAYEN
-        if (body.type === "planet" || "sun") {   // KONTROLLERAR OM OBJEKTET ÄR EN PLANET
+        if (body.type === "planet" || "sun") {   // KONTROLLERAR OBJEKTET
             const planetDiv = document.createElement("div") // SKAPAR EN NY DIV FÖR PLANETEN
             planetDiv.classList.add("planet")   // LÄGGER TILL KLASSEN "PLANET" FÖR STYLING
             planetDiv.addEventListener("click", () => showOverlay(body)) // KLICK-HÄNDELSE FÖR VISA OVERLAY
@@ -39,56 +39,38 @@ const displayPlanets = (bodies) => {
             // SÄTTER BAKGRUNDSBILD BASERAT PÅ PLANETENS NAMN
             if (body.name === "Merkurius") {
                 planetDiv.classList.add("merkurius")
-                planetDiv.style.backgroundImage = `url('assets/merkurius.jpeg')`
-                planetDiv.style.backgroundSize = "cover"     // TÄCKER HELA DIVEN
-                planetDiv.style.backgroundPosition = "center" // CENTRERAR BILDEN
+                planetDiv.style.background = "#888888"
             } else if (body.name === "Venus") {
                 planetDiv.classList.add("venus")
-                planetDiv.style.backgroundImage = `url('assets/venus.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#E7CDCD"
             }
             else if (body.name === "Jorden") {
                 planetDiv.classList.add("jorden")
-                planetDiv.style.backgroundImage = `url('assets/jorden.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#428ED4"
             }
             else if (body.name === "Mars") {
                 planetDiv.classList.add("mars")
-                planetDiv.style.backgroundImage = `url('assets/mars.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#EF5F5F"
             }
             else if (body.name === "Jupiter") {
                 planetDiv.classList.add("jupiter")
-                planetDiv.style.backgroundImage = `url('assets/jupiter.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#E29468"
             }
             else if (body.name === "Saturnus") {
                 planetDiv.classList.add("saturnus")
-                planetDiv.style.backgroundImage = `url('assets/saturnus.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#C7AA72"
             }
             else if (body.name === "Uranus") {
                 planetDiv.classList.add("uranus")
-                planetDiv.style.backgroundImage = `url('assets/uranus.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#C9D4F1"
             }
             else if (body.name === "Neptunus") {
                 planetDiv.classList.add("neptunus")
-                planetDiv.style.backgroundImage = `url('assets/neptunus.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#7A91A7"
             }
             else if (body.name === "Solen") {
                 planetDiv.classList.add("solen")
-                planetDiv.style.backgroundImage = `url('assets/sun.webp')`
-                planetDiv.style.backgroundSize = "cover"
-                planetDiv.style.backgroundPosition = "center"
+                planetDiv.style.background = "#FFD029"
             }
 
         }
