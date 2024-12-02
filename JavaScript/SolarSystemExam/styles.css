@@ -47,11 +47,14 @@ body {
   z-index: 1000;
   color: white;
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding: 11rem 30rem;
   font-size: 20px;
+}
+
+#overlay > * {
+  text-align: left;
 }
 #overlay h1,
 #overlay h2 {
@@ -97,9 +100,6 @@ hr {
   margin: 20px 0; /* Utrymme ovanför och under linjen */
   width: 80%; /* Bredden på linjen */
   max-width: 1000px;
-}
-
-.merkurius {
 }
 
 .solen {

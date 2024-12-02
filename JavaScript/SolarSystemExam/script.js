@@ -106,7 +106,8 @@ const showOverlay = (body) => {
     const overlay = document.getElementById("overlay") // HÄMTAR OVERLAY ELEMENTET
     // FYLLER OVERLAY MED INFO OM DEN KLICKADE PLANETEN
     overlay.innerHTML = `
-        <h1>${body.name.toUpperCase()} </h1>
+    <div class="overlay-inner">
+    <h1>${body.name.toUpperCase()} </h1>
         <h2>${body.latinName.toUpperCase()}</h2>
         <p>${body.desc}</p>
         <hr>
@@ -119,6 +120,7 @@ const showOverlay = (body) => {
         ${body.moons && body.moons.length > 0 ? `<p><strong>MÅNAR</strong><br>${body.moons.join(', ')}</p>` : ''}
         <hr>
         <button onclick="closeOverlay()">Stäng</button>
+    </div>
     `
     overlay.classList.remove("hidden") // VISAR OVERLAY GENOM ATT TA BORT KLASSEN "HIDDEN"
 }
