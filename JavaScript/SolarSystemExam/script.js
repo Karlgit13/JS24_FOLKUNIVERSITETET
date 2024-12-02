@@ -89,6 +89,7 @@ const showOverlay = (body) => {
     // FYLLER OVERLAY MED INFO OM DEN KLICKADE PLANETEN
     overlay.innerHTML = `
     <div class="overlay-inner">
+    <div class="overlay-sol"></div>
     <h1>${body.name.toUpperCase()} </h1>
         <h2>${body.latinName.toUpperCase()}</h2>
         <p>${body.desc}</p>
@@ -101,10 +102,11 @@ const showOverlay = (body) => {
         </div>
         ${body.moons && body.moons.length > 0 ? `<p><strong>MÅNAR</strong><br>${body.moons.join(', ')}</p>` : ''}
         <hr>
-        <button onclick="closeOverlay()">Stäng</button>
+        
     </div>
     `
     overlay.classList.remove("hidden") // VISAR OVERLAY GENOM ATT TA BORT KLASSEN "HIDDEN"
+    overlay.addEventListener("click", closeOverlay)
 }
 
 

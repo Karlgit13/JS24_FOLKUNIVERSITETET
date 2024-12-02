@@ -16,10 +16,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 6rem;
   width: 100vw;
   min-width: 1600px;
-
 }
 .planet {
   width: 120px;
@@ -60,6 +59,7 @@ body {
 
 #overlay > * {
   text-align: left;
+  padding: 1rem;
 }
 #overlay h1,
 #overlay h2 {
@@ -116,17 +116,85 @@ hr {
   font-size: 24px;
 }
 .header h2 {
-  color: #FFD029;
+  color: #ffd029;
 }
 
 .solen {
-  width: 800px;                      /* Bredd på solen */
-  height: 800px;                     /* Höjd på solen */
-  position: absolute;                /* Placera solen exakt */
-  left: -700px;                      /* Flytta så att bara halva syns */
-  top: 50%;                          /* Centrera vertikalt */
-  transform: translateY(-50%);       /* Justera exakt centrering */
-  background-color: #FFD029;         /* Solens färg */
-  border-radius: 50%;                /* Gör den till en cirkel */
-  clip-path: inset(0 0 0 50%);       /* Klipper bort den högra halvan */
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  left: -700px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffd029;
+  border-radius: 50%;
+  clip-path: inset(0 0 0 50%);
+}
+
+.merkurius {
+  width: 30px;
+  height: 30px;
+}
+
+.venus {
+  width: 40px;
+  height: 40px;
+}
+
+.jorden {
+  width: 50px;
+  height: 50px;
+}
+
+.mars {
+  width: 30px;
+  height: 30px;
+}
+
+.jupiter {
+  width: 200px;
+  height: 200px;
+}
+
+.saturnus {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-color: #c7aa72;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.saturnus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(145deg);
+  z-index: -1;
+}
+
+.uranus {
+  width: 80px;
+  height: 80px;
+}
+
+.neptunus {
+  width: 80px;
+  height: 80px;
+}
+
+.overlay-sol {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  height: 100%;
+  position: absolute;
+  left: -450px;
+  top: -20px;
+  background: rgb(75, 75, 243);
 }
