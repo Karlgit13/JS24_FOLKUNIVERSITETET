@@ -97,12 +97,12 @@ const showOverlay = (body) => {
         <p>${body.desc}</p>
         <hr>
         <div class="grid-container">
-        <p><strong>OMKRETS</strong> <br>${body.circumference} km</p>
-        <p><strong>KM FRÅN SOLEN</strong><br> ${body.distance} km</p>
-        <p><strong>MAX TEMPERATUR</strong><br> ${body.temp.day}°C</p>
-        <p><strong>MIN TEMPERATUR</strong><br> ${body.temp.night}°C</p>
+        <p><strong class="header-title">OMKRETS</strong> <br>${body.circumference} km</p>
+        <p><strong class="header-title">KM FRÅN SOLEN</strong><br> ${body.distance} km</p>
+        <p><strong class="header-title">MAX TEMPERATUR</strong><br> ${body.temp.day}°C</p>
+        <p><strong class="header-title">MIN TEMPERATUR</strong><br> ${body.temp.night}°C</p>
         </div>
-        ${body.moons && body.moons.length > 0 ? `<p><strong>MÅNAR</strong><br>${body.moons.join(', ')}</p>` : ''}
+        ${body.moons && body.moons.length > 0 ? `<p><strong class="header-title">MÅNAR</strong><br>${body.moons.join(', ')}</p>` : ''}
         <hr>
     </div>
     `

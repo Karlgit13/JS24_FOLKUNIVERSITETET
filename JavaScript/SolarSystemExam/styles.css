@@ -24,6 +24,7 @@ h2 {
 p {
   font-family: "roboto-condensed";
   font-size: 14px;
+  color: rgb(194, 189, 189);
 }
 .overlay-inner {
   max-width: 800px;
@@ -241,4 +242,8 @@ hr {
   font-size: 18px;
   position: absolute;
   bottom: 30px;
+}
+
+.header-title {
+  color: white;
 }
