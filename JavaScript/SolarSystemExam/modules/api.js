@@ -16,3 +16,4 @@ export const getBodies = async (apiKey) => {
     })
     return response.json()
 }
+
