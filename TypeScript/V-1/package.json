@@ -1,0 +1,20 @@
+{
+  "name": "v-1",
+  "version": "0.0.1",
+  "description": "Det här är ett intro-projekt till typescript",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Intro",
+    "typescript",
+    "node",
+    "npm"
+  ],
+  "author": "Karl Vareskog",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
