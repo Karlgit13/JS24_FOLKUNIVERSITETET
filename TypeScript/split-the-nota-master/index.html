@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="wrapper">
+        <h2>Split the nota</h2>
+        <section class="form" id="inputForm">
+            <section>
+                <input type="text" id="sum" class="form__input" required>
+                <label for="sum" class="form__label form__label_sum">Summa</label>
+            </section>
+            <section>
+                <input type="text" id="numberOfFriends" class="form__input" required>
+                <label for="numberOfFriends" class="form__label form__label_friends">Antal vänner</label>
+            </section>
+            <section>
+                <input type="text" id="tip" class="form__input" required>
+                <label for="tip" class="form__label form__label_tip">Dricks</label>
+            </section>
+            <button id="calculateButton" class="form__button">Räkna</button>
+        </section>
+        <section class="form hide" id="showSum">
+            <article>
+                <h2>Varje person ska betala</h2>
+                <h3 id="friendSum" class="show-sum"></h3>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
