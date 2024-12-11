@@ -1,32 +1,52 @@
-document.getElementById("calculateButton").addEventListener("click", () => {
-    // hämtar värden från html element
-    const sumInput = document.getElementById("sum").value
-    const tipInput = document.getElementById("tip").value
-    const friendsInput = document.getElementById("numberOfFriends").value
+//Dessa är alla variabler du behöver använda. 
+//De ska dock ligga i olika funktioner och inte nedanför.
 
-    // konverterar input till nummer
-    const sum = parseFloat(sumInput)
-    const tip = parseFloat(tipInput)
-    const numberOfFriends = parseInt(friendsInput, 10)
+const tip;
+const sum;
+const numberOfFriends;
+const total;
+const friendSum;
+const sumDivided;
+const calculatedTip;
+const total;
 
+//Hämtar det som skrivits i inputfältet med ID tip
+document.getElementById('tip').value;
 
-    // kontrollera om inmatningarna är giltiga
-    if (isNaN(sum) || isNaN(tip) || isNaN(numberOfFriends) || numberOfFriends <= 0) {
-        alert("inte siffror")
-        return
-    }
+function calculateTip(sum, tip) {}
 
+document.getElementById('calculateButton').addEventListener('click', function() {});
 
+//Hämtar det som skrivits i inputfältet med ID sum
+document.getElementById('sum').value;
 
-    // beräkna total och summa per vän
-    const calculatedTip = sum + tip
-    const total = sum + calculatedTip
-    const friendSum = total / numberOfFriends
+calculateTip(sum, tip);
 
-    // visa resultat i DOM
-    document.getElementById("friendSum").innerHTML = `${friendSum} kr`
+sum + calculatedTip;
 
-    // visa och dölj sektioner
-    document.getElementById("showSum").classList.remove("hide")
-    document.getElementById("inputForm").classList.add("hide")
-})
+function divideTotal(total, numberOfFriends) {}
+
+document.getElementById('friendSum').innerHTML = sum + ' kr';
+
+//Returnerar värdet i variablen sumDivided i en funktion
+return sumDivided;
+
+showDividedSum(friendSum);
+
+document.getElementById('showSum').classList.toggle('hide');
+
+total / numberOfFriends;
+
+function showDividedSum(sum) {}
+
+document.getElementById('inputForm').classList.toggle('hide');
+
+sum * tip;
+
+//Returnerar värdet i variablen total i en funktion
+return total;
+
+divideTotal(total, numberOfFriends);
+
+//Hämtar det som skrivits i inputfältet med ID numberOfFriends
+document.getElementById('numberOfFriends').value;
