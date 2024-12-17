@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "ES6",
         "outDir": "./dist/js",
-        "watch": true
+        // "watch": true
     },
     "include": ["./src"]
 }

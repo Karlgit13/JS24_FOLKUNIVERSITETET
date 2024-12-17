@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #333;
+    color: white;
+}
+
+#colorBox {
+    width: 200px;
+    height: 200px;
+}

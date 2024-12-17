@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5f2;
+}
+
+h3 {
+    color: #00214d;
+}
+
+p {
+    color: #1b2d45;
+}
+
+.button {
+    background-color: #078080;
+    outline: none;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: box-shadow 0.3s;
+}
+.button:hover {
+    box-shadow: 0 8px 10px -5px rgba(31, 18, 53, 0.6);
+}
+
+.button:active {
+    box-shadow: none;
+}
+
+.link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #078080;
+    margin-right: 0.5rem;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+}
+
+.menu {
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.cart-total {
+    width: 25px;
+    height: 25px;
+    border-radius: 999rem;
+    background-color: #fffffe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-wrapper {
+    width: 300px;
+    background-color: #fffffe;
+    position: absolute;
+    top: 4rem;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-wrapper ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cart-wrapper li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    font-weight: 700;
+}
+
+.hide {
+    display: none;
+}
+
+.cards {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.card {
+    max-width: 300px;
+    background-color: #fffffe;
+    text-align: center;
+    padding: 1.2rem;
+    box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.about {
+    text-align: left;
+}
+
+.author {
+    text-align: center;
+    margin-top: 0;
+    font-size: 0.9rem;
+}

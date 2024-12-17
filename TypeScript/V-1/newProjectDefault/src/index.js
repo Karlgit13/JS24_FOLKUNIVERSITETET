@@ -5,4 +5,4 @@ console.log(names);
 function getNames(firstName, lastName) {
     return firstName + lastName;
 }
-console.log(getNames("Kalle", "Vareskog"))
+getNames("Kalle", "Vareskog");
