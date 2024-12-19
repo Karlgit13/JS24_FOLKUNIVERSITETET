@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../src/styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
+    <div class="container">
+        <h1>slå 5 tärning</h1>
+        <label for="dice-sides">Antal sidor:</label>
+        <select name="" id="dice-sides">
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="24">24</option>
+        </select>
+        <button id="roll-btn">Kasta tärning</button>
+        <div id="dice-container"></div>
+    </div>
+
     <script src="index.js"></script>
 </body>
+
 </html>
