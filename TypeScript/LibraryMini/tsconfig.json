@@ -1,8 +1,13 @@
 {
-    "compilerOptions": {
-        "target": "ES6", // Vilken JS version ska vi kompilera till
-        "outDir": "./dist", // Var ska JS-filen hamna? I vilken mapp?
-    },
-    "include": ["./src"], // Vad för filer ska vi kompilera till JS?
-    "exclude": [] // Vad ska vi inte kompilera?
+  "compilerOptions": {
+    "target": "ES2015", // Modern JavaScript-standard
+    "module": "esnext", // Använd ESModules
+    "lib": ["ES2015", "DOM"], // Bibliotek för moderna funktioner och DOM
+    "outDir": "./dist", // Output-mapp
+    "rootDir": "./src", // Källkodsmapp
+    "strict": true, // Strikt typkontroll
+    "esModuleInterop": true // Underlättar modulanvändning
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
