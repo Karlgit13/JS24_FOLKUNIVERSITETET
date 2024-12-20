@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2015", // Modern JavaScript-standard
-    "module": "esnext", // Använd ESModules
-    "lib": ["ES2015", "DOM"], // Bibliotek för moderna funktioner och DOM
-    "outDir": "./dist", // Output-mapp
-    "rootDir": "./src", // Källkodsmapp
-    "strict": true, // Strikt typkontroll
+    "target": "ES2015", // Gör att koden kompileras till modern JavaScript
+    "module": "esnext", // Använder ESModules
+    "lib": ["ES2015", "DOM"], // Ger stöd för moderna funktioner och DOM
+    "outDir": "./dist", // Output-katalog
+    "rootDir": "./src", // Källkods-katalog
+    "strict": true, // Aktiverar strikt typkontroll
     "esModuleInterop": true // Underlättar modulanvändning
   },
   "include": ["src/**/*.ts"],
