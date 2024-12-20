@@ -1,7 +1,11 @@
 export interface Book {
-  id: number;
-  title: string;
+  audience: string;
   author: string;
-  description: string;
-  rating: number;
+  color: string;
+  id: number;
+  pages: number;
+  plot: string;
+  pulisher: string;
+  title: string;
+  year: number;
 }
