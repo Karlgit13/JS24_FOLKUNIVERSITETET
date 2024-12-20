@@ -5,7 +5,7 @@ export interface Book {
   id: number;
   pages: number;
   plot: string;
-  pulisher: string;
+  publisher: string;
   title: string;
   year: number;
 }

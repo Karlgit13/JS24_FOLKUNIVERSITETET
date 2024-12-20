@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  height: 100vh;
 }
 
 h1 {
@@ -20,6 +22,7 @@ h3,
 p {
   color: white;
   text-shadow: 2px 4px 2px solid black;
+  max-width: 500px;
 }
 
 #search-input {
@@ -45,4 +48,30 @@ p {
   width: 100%;
   height: 300px;
   justify-content: end;
+}
+
+
+.book-details {
+    grid-column: 1 / 5;
+    width: 50vw;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+    text-align: center;
+    gap: 10px;
+}
+
+#back-btn {
+    padding: 0.3rem;
+    place-content: end;
+    margin-top: 5rem;
 }

@@ -54,14 +54,17 @@ function displayBookDetails(book) {
     detailsDiv.className = "book-details"; // lägger till classname
     detailsDiv.style.background = book.color; // sätter backgrund
     detailsDiv.innerHTML = `
-    <h2>${book.title}</h2>
+    <h3>${book.title}</h3>
     <p><strong>By:</strong> ${book.author}</p>
-    <p><strong>Audience:</strong> ${book.audience}</p>
-    <p><strong>Id:</strong> ${book.id}</p>
+     <p><strong>Plot:</strong> ${book.plot}</p>
+     <div class="book-information">
+     <p><strong>Audience:</strong> ${book.audience}</p>
     <p><strong>Pages:</strong> ${book.pages}</p>
-    <p><strong>Publisher:</strong> ${book.pulisher}</p>
+    <p><strong>Publisher:</strong> ${book.publisher}</p>
     <p><strong>Year:</strong> ${book.year}</p>
-    <p><strong>Plot:</strong> ${book.plot}</p>
+     </div>
+    
+   
     <button id="back-btn">Back</button>
   `; // visar egenskaper från API
     const backButton = detailsDiv.querySelector("#back-btn"); // html knapp element
