@@ -31,6 +31,7 @@ function displayBookList(books: Book[]): void {
     bookDiv.className = "book-card"; // lägger till classname
     bookDiv.style.background = book.color; // tar book.color egenskapen för sätta bg färg på bookDiv
     bookDiv.innerHTML = `
+    <div class="book-line"></div>
       <h3>${book.title}</h3>
       <p>By: ${book.author}</p>
     `; // visar title och author på boookDiv
@@ -48,29 +49,31 @@ function displayBookList(books: Book[]): void {
 // lägger till Book interface på parameter och använder void då funktion ej returnerar ett värde
 function displayBookDetails(book: Book): void {
   const container = document.getElementById("book-container") as HTMLElement; // html element
+  const searchDiv = document.querySelector(".search-div") as HTMLElement;
   container.innerHTML = ""; // tömmer container
+  searchDiv.classList.add("hide");
 
   const detailsDiv: HTMLElement = document.createElement("div"); // skapar detailsDiv
   detailsDiv.className = "book-details"; // lägger till classname
   detailsDiv.style.background = book.color; // sätter backgrund
+  document.body.style.background = "#222222";
   detailsDiv.innerHTML = `
-    <h3>${book.title}</h3>
-    <p><strong>By:</strong> ${book.author}</p>
-     <p><strong>Plot:</strong> ${book.plot}</p>
-     <div class="book-information">
-     <p><strong>Audience:</strong> ${book.audience}</p>
-    <p><strong>Pages:</strong> ${book.pages}</p>
-    <p><strong>Publisher:</strong> ${book.publisher}</p>
-    <p><strong>Year:</strong> ${book.year}</p>
-     </div>
-    
-   
-    <button id="back-btn">Back</button>
+  <div class="book-line"></div>
+  <div class="title-author">
+  <h3 class="book-title">${book.title}</h3>
+    <p class="book-author"><strong>By:</strong> ${book.author}</p>
+    <p class="book-plot"><strong>Plot:</strong><br> ${book.plot}</p>
+    <div class="book-info">
+    <p class="book-audience"><strong>Audience:</strong> ${book.audience}</p>
+    <p class="book-pages"><strong>Pages:</strong> ${book.pages}</p>
+    <p class="book-publisher"><strong>Publisher:</strong> ${book.publisher}</p>
+    <p class="book-year"><strong>Year:</strong> ${book.year}</p>
+    </div>
   `; // visar egenskaper från API
 
-  const backButton = detailsDiv.querySelector("#back-btn") as HTMLButtonElement; // html knapp element
-  backButton.addEventListener("click", () => {
+  detailsDiv.addEventListener("click", () => {
     // lyssnar efter klick kallar på init()
+    searchDiv.classList.remove("hide");
     init();
   });
 
