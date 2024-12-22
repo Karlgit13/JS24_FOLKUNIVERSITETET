@@ -1,7 +1,7 @@
 // importerar "Book" interface
 import { Book } from "./interfaces";
 
-// api nyckel
+// api URL
 const API_URL =
   "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
 
